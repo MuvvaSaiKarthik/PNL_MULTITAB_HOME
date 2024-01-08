@@ -26,7 +26,7 @@ selected = option_menu(
 
 def fetch_data():
     try:
-        df = pd.read_csv('M:\\append_testing\DC\PNL_Team.csv')
+        df = pd.read_csv('PNL_Team.csv')
         df[['Mrg', 'Y_PNL', 'E_PNL', 'O_PNL', 'I_PNL', 'T_PNL']] = df[['Mrg', 'Y_PNL', 'E_PNL', 'O_PNL', 'I_PNL', 'T_PNL']].round(2)
         return df
     except Exception as e:
@@ -42,15 +42,6 @@ def style_dataframe(df):
 
 if selected == 'PNL':
     st.title('PNL')
-
-    # if st.button("Logout"):
-    #     st.markdown(
-    #         """
-    #         <meta http-equiv="refresh" content="0;URL='http://localhost:8505/'"/>
-    #         """
-    #         , unsafe_allow_html=True
-    #     )
-
     # Create placeholders for dynamic content
     time_display = st.empty()
     total_dataframe_placeholder = st.empty()
@@ -60,7 +51,7 @@ if selected == 'PNL':
         current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         # Read quantity_fetch_time.csv
-        quantity_fetch_time_df = pd.read_csv('J:\\OutPut\\testing\\quantity_fetch_time.csv')
+        quantity_fetch_time_df = pd.read_csv('quantity_fetch_time.csv')
         quantity_fetch_time = pd.to_datetime(quantity_fetch_time_df['Fetch Time'].iloc[0])
 
         # Update time_display placeholder
@@ -102,14 +93,6 @@ if selected == 'PNL':
 if selected == 'SENTI':
     st.title('SENTI')
 
-    # if st.button("Logout"):
-    #     st.markdown(
-    #         """
-    #         <meta http-equiv="refresh" content="0;URL='http://localhost:8505/'"/>
-    #         """
-    #         , unsafe_allow_html=True
-    #     )
-
     # Create placeholders for dynamic content
     time_display = st.empty()
     total_dataframe_placeholder = st.empty()
@@ -119,7 +102,7 @@ if selected == 'SENTI':
         current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         # Read quantity_fetch_time.csv
-        quantity_fetch_time_df = pd.read_csv('J:\\OutPut\\testing\\quantity_fetch_time.csv')
+        quantity_fetch_time_df = pd.read_csv('quantity_fetch_time.csv')
         quantity_fetch_time = pd.to_datetime(quantity_fetch_time_df['Fetch Time'].iloc[0])
 
         # Update time_display placeholder
@@ -160,15 +143,6 @@ if selected == 'SENTI':
 
 if selected == 'Scenario':
     st.title('SCENARIO')
-
-    # if st.button("Logout"):
-    #     st.markdown(
-    #         """
-    #         <meta http-equiv="refresh" content="0;URL='http://localhost:8505/'"/>
-    #         """
-    #         , unsafe_allow_html=True
-    #     )
-
     # Create placeholders for dynamic content
     time_display = st.empty()
     total_dataframe_placeholder = st.empty()
@@ -178,7 +152,7 @@ if selected == 'Scenario':
         current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         # Read quantity_fetch_time.csv
-        quantity_fetch_time_df = pd.read_csv('J:\\OutPut\\testing\\quantity_fetch_time.csv')
+        quantity_fetch_time_df = pd.read_csv('quantity_fetch_time.csv')
         quantity_fetch_time = pd.to_datetime(quantity_fetch_time_df['Fetch Time'].iloc[0])
 
         # Update time_display placeholder
