@@ -10,7 +10,7 @@ def logout():
     if st.button("Logout"):
         st.markdown(
             """
-            <meta http-equiv="refresh" content="0;URL='https://pnlmultitab.streamlit.app/'"/>
+            <meta http-equiv="refresh" content="0;URL='https://pnlmultitabcred.streamlit.app/'"/>
             """
             , unsafe_allow_html=True
         )
